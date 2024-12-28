@@ -13,6 +13,10 @@ const Suggestions = () => {
         setList([...list, item]); // Add the selected item to the list
     };
 
+    const handleupdateList = (itemToRemove) => {
+        setList(list.filter(item => item !== itemToRemove)); // Remove the selected item
+    };
+
     useEffect(() => {
         if (suggestion.length > 1) {
             fetchData();
@@ -44,7 +48,7 @@ const Suggestions = () => {
             <div>
                 {data.map((item, index) => (
                     <div key={index} className="bg-blue-300 m-2 p-2 flex justify-between">
-                        <div>{item}</div>
+                        <div className='overflow-y-auto'>{item}</div>
                         <button
                             className="ml-6 bg-gray-600 text-white p-2 border rounded-md"
                             onClick={() => handleList(item)} // Pass the item to the function
@@ -53,13 +57,19 @@ const Suggestions = () => {
                         </button>
                     </div>
                 ))}
-            </div>
+            </div> 
             <div>
                 <h1 className="text-xl font-bold mt-6">Shopping List</h1>
                 <div>
                     {list.map((item, index) => (
-                        <div key={index} className="bg-green-200 m-2 p-2 rounded-md">
+                        <div key={index} className="flex bg-green-200 m-2 p-2 rounded-md">
                             {item}
+                            <button
+                                className="bg-gray-600 text-white p-2 border rounded-md ml-4"
+                                onClick={() => handleupdateList(item)} // Pass the item to the function
+                            >
+                                x
+                            </button>
                         </div>
                     ))}
                 </div>
