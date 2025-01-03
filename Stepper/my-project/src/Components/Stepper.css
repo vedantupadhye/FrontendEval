@@ -1,0 +1,17 @@
+.active{
+    background-color: #017BFE;
+  }
+  
+  .step-number {
+    height: 40px; /* Equivalent to h-10 */
+    width: 40px;  /* Equivalent to w-10 */
+    border-radius: 50%; /* Rounded full */
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    color: white; /* Text color */
+    background-color: #94a3b8; /* Default slate color */
+    margin: 0 16px; /* Equivalent to mx-4 */
+    position: relative; /* For the line positioning */
+    font-weight: bold; /* Optional for bold text */
+  }
