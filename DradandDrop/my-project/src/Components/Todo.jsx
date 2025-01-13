@@ -2,7 +2,7 @@ import React from 'react'
 
 const Todo = ({data}) => {
   return (
-    <div className='flex gap-20 my-4 mx-72' >
+    <div className='flex gap-20 my-4 mx-24' >
          <div className=''>
         <h2 className='font-bold text-2xl my-4 '>ToDo</h2>
         <div >
